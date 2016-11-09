@@ -22,7 +22,6 @@ set smarttab
 colorscheme molokai
 syntax on
 
-
 set paste
 
 
