@@ -76,7 +76,6 @@ noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^a
 nnoremap Y y$
 
-
 "NeoBundle
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
