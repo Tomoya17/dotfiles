@@ -40,12 +40,9 @@ nnoremap Y y$
 "----------
 " カラースキーム
 "----------
-"colorscheme molokai
-"syntax on
 
 set paste
 set ft=zsh:
-
 
 "NeoBundle
 " Note: Skip initialization for vim-tiny or vim-small.
@@ -69,19 +66,12 @@ set ft=zsh:
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 
-" solarized
-NeoBundle 'altercation/vim-colors-solarized'
-" mustang
-NeoBundle 'croaker/mustang-vim'
-" jellybeans
-NeoBundle 'nanotech/jellybeans.vim'
-" molokai
-NeoBundle 'tomasr/molokai'
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
+"NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'ujihisa/unite-colorscheme'
 
- call neobundle#end()
+
+call neobundle#end()
 
  " Required:
  filetype plugin indent on
