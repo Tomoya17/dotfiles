@@ -1,4 +1,4 @@
-"setting
+" Basic setting {
 "文字コードをUFT-8に設定
 set fenc=utf-8
 "バックアップファイルを作らない
@@ -42,6 +42,7 @@ set autoread
 set smarttab
 
 "検索機能系
+B
 "大文字小文字を無視
 set ignorecase
 "ignorecaseと組み合わせて、小文字入力の時のみ大文字小文字無視
@@ -66,6 +67,9 @@ set spelllang=en,cjk""日本語を除外
 "現在の行をハイライト
 set cursorline
 hi clear CursorLine "上と合わせて行番号のみハイライト
+
+" clipbord
+set clipboard+=unnamed
 
 set paste
 set ft=zsh:
