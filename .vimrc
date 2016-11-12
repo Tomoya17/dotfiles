@@ -5,7 +5,6 @@ set noswapfile
 set hidden
 set showcmd
 set autoindent
-set nocompatible
 set number
 set showmatch
 
@@ -38,7 +37,7 @@ nnoremap <silent> <ESC><ESC> :nohlsearch<CR>
 set pumheight=10
 set laststatus=2
 set spell
-set spelllang=en,cjk""日本語を除外
+set spelllang=en,cjk
 "set foldmethod=marker
 set cursorline
 hi clear CursorLine 
@@ -50,7 +49,9 @@ set paste
 set ft=zsh:
 
 
-"NeoBundle
+
+
+" NeoBundle{{{
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
@@ -60,30 +61,28 @@ endif
 
 " Required:
 set runtimepath+=~/.vim/bundle/neobundle.vim/
-
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
-
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
 
+" My Bundles here
 " solarized
 NeoBundle 'altercation/vim-colors-solarized'
-
+" NERDTree
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 
 
 call neobundle#end()
-
 " Required:
 filetype plugin indent on
+"}}}
 
+"solarized
 "let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 syntax enable
@@ -94,5 +93,12 @@ syntax on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
  NeoBundleCheck
+
+
+" NERDTree
+nnoremap <silent><C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
