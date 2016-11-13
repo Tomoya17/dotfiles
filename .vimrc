@@ -43,7 +43,8 @@ hi clear CursorLine
 set clipboard+=unnamed
 
 set paste
-set ft=zsh:
+"set ft=zsh:
+set vb t_vb=
 
 
 " NeoBundle{{{
