@@ -30,9 +30,6 @@ set incsearch
 set hlsearch
 nnoremap <silent> <ESC><ESC> :nohlsearch<CR>
 
-
-"}}
-
 " Display setting{{
 set pumheight=10
 set laststatus=2
@@ -47,8 +44,6 @@ set clipboard+=unnamed
 
 set paste
 set ft=zsh:
-
-
 
 
 " NeoBundle{{{
