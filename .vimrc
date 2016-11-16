@@ -7,6 +7,7 @@ set showcmd
 set autoindent
 set number
 set showmatch
+set backspace=indent,eol,start
 
 " Move
 "set whichwrap=b,s,h,l,<,>,[,],~
