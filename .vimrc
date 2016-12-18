@@ -74,6 +74,10 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 " neocomplete
 NeoBundle 'Shougo/neocomplete.vim'
+" caw.vim
+NeoBundle "tyru/caw.vim"
+" vim-quickhl
+NeoBundle "t9md/vim-quickhl"
 
 call neobundle#end()
 " Required:
@@ -172,3 +176,18 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+
+
+" caw.vim ' commentout and uncommentout  by \c '
+nmap \c <Plug>(caw:I:toggle)
+vmap \c <Plug>(caw:I:toggle)
+
+nmap \C <Plug>(caw:I:uncomment)
+vmap \C <Plug>(caw:I:uncomment)
+
+
+" vim-quickhl ' highlight by space m '
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
