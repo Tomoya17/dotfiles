@@ -84,6 +84,7 @@ call neobundle#end()
 filetype plugin indent on
 "}}}
 
+
 "solarized
 "let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
