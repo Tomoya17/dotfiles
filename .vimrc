@@ -5,7 +5,7 @@ set noswapfile
 set hidden
 set showcmd
 set autoindent
-set number
+"set number
 set showmatch
 set backspace=indent,eol,start
 
