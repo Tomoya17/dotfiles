@@ -160,5 +160,7 @@ case ${OSTYPE} in
       ;;
 esac
 
+#pythonにおいてのopencvのpath
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:$PYTHONPATH"
 
 # vim:set ft=zsh:
