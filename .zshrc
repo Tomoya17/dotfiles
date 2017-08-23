@@ -20,8 +20,11 @@ SAVEHIST=1000000
 # 1行表示
 # PROMPT="%~ %# "
 # 2行表示
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
-%# "
+# PROMPT="%{${fg[yellow]}%}[%n@%m]%{${reset_color}%} %~
+# %# "
+PROMPT="
+[%n@Mac] %{${fg[yellow]}%}%~%{${reset_color}%}
+%(?.%{$fg[green]%}.%{$fg[blue]%})%(?! (=ﾟ-ﾟ)ﾉﾆｬｰﾝ♪ <!(*;-;%)? <)%{${reset_color}%} "
 
 
 # 単語の区切り文字を指定する
@@ -51,6 +54,20 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
+
+setopt auto_param_slash      # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
+setopt mark_dirs             # ファイル名の展開でディレクトリにマッチした場合 末尾に / を付加
+
+
+#LS_COLORSを設定しておく
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+#ファイル補完候補に色を付ける
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' format '%B%d%b'
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion:*' group-name ''
 
 ########################################
 # vcs_info
@@ -163,4 +180,12 @@ esac
 #pythonにおいてのopencvのpath
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:$PYTHONPATH"
 
-# vim:set ft=zsh:
+# vim:set ft=zsh
+
+# syntax highlightの設定
+if [ -f /Users/tomoya/.zsh/zsh-syntax-highlighting.zsh ]; then
+    source /Users/tomoya/.zsh/zsh-syntax-highlighting.zsh
+    ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+fi
+
+
