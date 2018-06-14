@@ -1,4 +1,3 @@
-
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
@@ -131,7 +130,7 @@ setopt extended_glob
 bindkey '^R' history-incremental-pattern-search-backward
 
 ########################################
-# エイリアス
+# alias (エイリアス)
 
 alias la='ls -a'
 alias ll='ls -l'
@@ -141,6 +140,11 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias mkdir='mkdir -p'
+
+# 修士論文
+alias masterresearch='cd /Users/tomoya/Documents/修士論文'
+
+alias paiza='cd /Users/tomoya/Desktop/paiza'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
@@ -163,6 +167,7 @@ elif which putclip >/dev/null 2>&1 ; then
 fi
 
 
+
 ########################################
 # OS 別の設定
 case ${OSTYPE} in
@@ -177,9 +182,6 @@ case ${OSTYPE} in
       ;;
 esac
 
-#pythonにおいてのopencvのpath
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:$PYTHONPATH"
-
 # vim:set ft=zsh
 
 # syntax highlightの設定
@@ -187,5 +189,50 @@ if [ -f /Users/tomoya/.zsh/zsh-syntax-highlighting.zsh ]; then
     source /Users/tomoya/.zsh/zsh-syntax-highlighting.zsh
     ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 fi
+
+alias LocalizeLidar='cd ~/Documents/UniversalMap/LiDAR位置推定アルゴリズム/tomoya_localize_laser'
+
+
+#Opencvのchamfer matchingのため
+#dyld: 動的ライブラリのPATHの設定
+#DYLD_LIBRARY_PATH=/usr/local/Cellar/opencv/2.4.13.1/lib
+#export DYLD_LIBRARY_PATH
+
+#DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/Cellar/jpeg/8d/lib/
+#export DYLD_LIBRARY_PATH
+
+#DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/lib
+#export DYLD_LIBRARY_PATH
+
+
+# for Pokemon-Terminal
+unset PYTHONPATH
+
+PATH=/Users/tomoya/.Pokemon-Terminal:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/TeX/texbin:/usr/local/share/dotnet:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Users/tomoya/.pyenv/shims/python
+
+#pokemon Pikachu
+#pokemon Exeggutor
+pokemon Lapras
+#pokemon Diglett
+#pokemon Raichu
+
+#pokemon Snorlax
+
+
+#pythonにおいてのopencvのpath
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:$PYTHONPATH"
+
+
+# tab補完で出したファイルなどを選択
+zmodload -i zsh/complist
+autoload -Uz compinit && compinit
+zstyle ':completion:*:default' menu select=2
+
+# 補完時にhjklで選択
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+
 
 
