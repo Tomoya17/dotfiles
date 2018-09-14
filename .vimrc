@@ -113,12 +113,16 @@ filetype plugin indent on
 
 
 "solarized
-"let g:solarized_termcolors=256
-let g:solarized_termtrans = 1
+let g:solarized_termcolors=256
+" let g:solarized_termtrans = 1
 syntax enable
 set background=dark
+" set background=light
 colorscheme solarized 
 syntax on
+
+"let g:solarized_contrast = "high"
+"let g:solarized_visibility = "high"
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.

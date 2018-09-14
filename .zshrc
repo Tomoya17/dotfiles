@@ -22,7 +22,7 @@ SAVEHIST=1000000
 # PROMPT="%{${fg[yellow]}%}[%n@%m]%{${reset_color}%} %~
 # %# "
 PROMPT="
-[%n@Mac] %{${fg[yellow]}%}%~%{${reset_color}%}
+[%n@Mac] %{${fg[red]}%}%~%{${reset_color}%}
 %(?.%{$fg[green]%}.%{$fg[blue]%})%(?! (=ﾟ-ﾟ)ﾉﾆｬｰﾝ♪ <!(*;-;%)? <)%{${reset_color}%} "
 
 
@@ -210,9 +210,9 @@ unset PYTHONPATH
 
 PATH=/Users/tomoya/.Pokemon-Terminal:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/TeX/texbin:/usr/local/share/dotnet:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Users/tomoya/.pyenv/shims/python
 
-#pokemon Pikachu
+pokemon Pikachu
 #pokemon Exeggutor
-pokemon Lapras
+#pokemon Lapras
 #pokemon Diglett
 #pokemon Raichu
 
@@ -236,3 +236,5 @@ bindkey -M menuselect 'l' vi-forward-char
 
 
 
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/opencv@2/bin:$PATH"
